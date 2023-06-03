@@ -1,0 +1,23 @@
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: black;
+    height: 80px;
+}
+
+.navegacion{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.links{
+    color: rgb(226, 226, 226);
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
