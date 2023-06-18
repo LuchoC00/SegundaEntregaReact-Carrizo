@@ -12,7 +12,7 @@ const AboutPage = () => {
           color: "#555",
         }}
       >
-        Upss... Esta pagina todabia no existe
+        Upss... Esta pagina todavia no existe
       </div>
     )
 }
