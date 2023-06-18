@@ -5,14 +5,13 @@ import LogoDevOutlinedIcon from '@mui/icons-material/LogoDevOutlined';
 
 
 const NavBar = () => {
-  return (
-    <nav>
+	return (
+    	<nav>
 			<a href="https://www.coderhouse.com" target='blank' ><LogoDevOutlinedIcon color='secondary' fontSize='large'/></a>
 			<ul className='navegacion'>
-				<a className='links' href="https://www.coderhouse.com" target='blank' ><li>Inicio</li></a>
-				<a className='links' href="https://www.coderhouse.com" target='blank' ><li>Promociones</li></a>
-				<a className='links' href="https://www.coderhouse.com" target='blank' ><li>Sobre Nosotros</li></a>
-				<a className='links' href="https://www.coderhouse.com" target='blank' ><li>Contacto</li></a>
+				<a className='links' href="https://www.coderhouse.com" target='blank' ><li>home</li></a>
+				<a className='links' href="https://www.coderhouse.com" target='blank' ><li>category</li></a>
+				<a className='links' href="https://www.coderhouse.com" target='blank' ><li>about</li></a>
 			</ul>
 			<CartWidget/>
 		</nav>

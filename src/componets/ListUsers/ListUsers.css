@@ -1,0 +1,11 @@
+.general{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.title{
+    text-align: center;
+    margin: 15px;
+    text-transform: uppercase;
+}
