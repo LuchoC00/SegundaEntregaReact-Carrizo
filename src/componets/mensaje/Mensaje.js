@@ -1,5 +1,5 @@
 import React from 'react';
-import "./ItemListContainer.css";
+import "./Mensaje.css";
 
 const ItemListContainer = ({mensaje, Color, bgColor}) => {
 

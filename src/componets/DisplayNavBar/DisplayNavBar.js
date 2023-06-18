@@ -9,6 +9,7 @@ import Popper from "@mui/material/Popper";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function DisplayNavBar() {
 
@@ -30,19 +31,13 @@ export default function DisplayNavBar() {
 		}
 	})
 
-
-
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
-  const cambiarPagina = () =>{
-    
+  const toHome = () =>{
+    setSelectedIndex(0)
   }
-
-  const handleClick = () => {
-    console.info(`You clicked ${options[selectedIndex]}`);
-  };
 
   const handleMenuItemClick = (event, index) => {
     setSelectedIndex(index);
@@ -68,7 +63,7 @@ export default function DisplayNavBar() {
         ref={anchorRef}
         aria-label="split button"
       >
-        <Button onClick={handleClick}>{options[selectedIndex]}</Button>
+        <Link to={"/"} style={{display: "flex", justifyContent: "center"}}> <Button onClick={toHome}>{options[selectedIndex]}</Button></Link>
         <Button
           size="small"
           aria-controls={open ? "split-button-menu" : undefined}
@@ -102,13 +97,30 @@ export default function DisplayNavBar() {
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu" autoFocusItem>
                   {options.map((option, index) => (
+                    <div key={option}>{index ===0 ? //si index = 0 crea a "category"
+                    <Link to={`/`}>
                     <MenuItem
                       key={option}
                       selected={index === selectedIndex}
                       onClick={(event) => handleMenuItemClick(event, index)}
                     >
                       {option}
+                    </MenuItem> 
+                    </Link>
+                    : 
+                    
+                    (                             //sino crea la categoria con su nombre  
+                      <Link to={`/category/${option}`}>
+                      <MenuItem
+                      key={option}
+                      selected={index === selectedIndex}
+                      onClick={(event) => handleMenuItemClick(event, index)}
+                    >
+                      {option}
                     </MenuItem>
+                    </Link>
+                    )}
+                    </div>
                   ))}
                 </MenuList>
               </ClickAwayListener>
