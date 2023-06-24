@@ -2,9 +2,9 @@ import './App.css';
 
 import Header from './componets/Header/Header';
 import HomePage from './pages/home/HomePage';
-import CategoryPage from './pages/category/CategoryPage';
 import AboutPage from './pages/about/AboutPage';
 import ItemPage from './pages/item/ItemPage';
+import CategoryPage from './pages/category/CategoryPage';
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
